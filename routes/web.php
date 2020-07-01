@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@show');
+Route::get('/data-tables', 'HomeController@data');
 
-Route::get('/register', 'AuthController@form');
-Route::post('/register', 'AuthController@show');
+// Route::get('/register', 'AuthController@form');
+// Route::post('/register', 'AuthController@show');

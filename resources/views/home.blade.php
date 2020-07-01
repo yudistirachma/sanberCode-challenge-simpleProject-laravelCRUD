@@ -1,21 +1,58 @@
 @extends('layout.app')
 @section('title','Home')
 @section('content')
-    <h2>SanberBook</h2>
-    <h3>Social Media Developer Santai Berkualitas</h3>
-    <p>BElaar dan Bebagi agar hidup ini semakin santaiberkualitas</p>
-    <h4>Benefit Join di SanberBook </h4>
-    <ul>
-        <li>Mendapatkan motivasi dari sesama developer</li>
-        <li>Sharing knowledge dai para mastah Sanber</li>
-        <li>Dibuat oleh caln web developer terbaik</li>
-    </ul>
-    <h4>Cara Bergabung ke SanbeBook</h4>
-    <ol>
-        <li>Mengunjungi motivasi website ini</li>
-        <li>Medaftar di <a href="/register">From Sign Up</a></li>
-        <li>Selesai !</li>
-    </ol>
+    <table class="table table-bordered">
+  <thead>                  
+    <tr>
+      <th style="width: 10px">#</th>
+      <th>Task</th>
+      <th>Progress</th>
+      <th style="width: 40px">Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+      <td>Update software</td>
+      <td>
+        <div class="progress progress-xs">
+          <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+        </div>
+      </td>
+      <td><span class="badge bg-danger">55%</span></td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>Clean database</td>
+      <td>
+        <div class="progress progress-xs">
+          <div class="progress-bar bg-warning" style="width: 70%"></div>
+        </div>
+      </td>
+      <td><span class="badge bg-warning">70%</span></td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>Cron job running</td>
+      <td>
+        <div class="progress progress-xs progress-striped active">
+          <div class="progress-bar bg-primary" style="width: 30%"></div>
+        </div>
+      </td>
+      <td><span class="badge bg-primary">30%</span></td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>Fix and squish bugs</td>
+      <td>
+        <div class="progress progress-xs progress-striped active">
+          <div class="progress-bar bg-success" style="width: 90%"></div>
+        </div>
+      </td>
+      <td><span class="badge bg-success">90%</span></td>
+    </tr>
+  </tbody>
+</table>
 @endsection
 
 
