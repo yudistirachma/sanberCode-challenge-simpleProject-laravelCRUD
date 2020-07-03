@@ -5,7 +5,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/pertanyaan" class="nav-link">Hasil</a>
+        <a href="/pertanyaan" class="nav-link">Pertanyaan</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="/pertanyaan/create" class="nav-link">Create</a>

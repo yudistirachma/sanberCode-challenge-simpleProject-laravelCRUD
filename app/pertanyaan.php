@@ -17,4 +17,8 @@ class pertanyaan extends Model
         $newData = DB::table('pertanyaan')->insert($data);
         return $newData;
     }
+    public static function detail($id)
+    {
+        return DB::table('pertanyaan')->where('id', $id)->get();
+    }
 }

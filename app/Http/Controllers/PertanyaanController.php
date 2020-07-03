@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\pertanyaan;
 use Illuminate\Support\Facades\Redirect;
+use App\Jawaban;
 
 class PertanyaanController extends Controller
 {
@@ -26,6 +27,16 @@ class PertanyaanController extends Controller
         } else {
             redirect('/pertanyaan/create');
         }
-        echo $hasil;
+    }
+    public function detail($id)
+    {
+        $jawaban = Jawaban::getAll($id);
+        $data = pertanyaan::detail($id);
+        return view('detail', compact('data', 'jawaban'));
+    }
+    public function edit($id)
+    {
+        $data = pertanyaan::detail($id);
+        return view('edit', compact('data'));
     }
 }
