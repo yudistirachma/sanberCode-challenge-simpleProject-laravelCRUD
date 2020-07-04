@@ -19,7 +19,7 @@
         @csrf
         <div class="form-group">
             <label for="isi">jawab : </label>
-            <textarea class="form-control" name="isi" rows="5" id="isi"></textarea>
+            <textarea class="form-control" required name="isi" rows="5" id="isi"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

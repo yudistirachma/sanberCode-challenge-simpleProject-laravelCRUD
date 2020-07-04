@@ -8,11 +8,11 @@
         @csrf
         <div class="form-group">
             <label for="judul">Judul</label>
-            <input type="text" class="form-control" name="judul" id="judul">
+            <input type="text" required class="form-control" name="judul" id="judul">
         </div>
         <div class="form-group">
             <label for="isi">Comment:</label>
-            <textarea class="form-control" name="isi" rows="5" id="isi"></textarea>
+            <textarea class="form-control" required name="isi" rows="5" id="isi"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
