@@ -39,4 +39,15 @@ class PertanyaanController extends Controller
         $data = pertanyaan::detail($id);
         return view('edit', compact('data'));
     }
+    public function update($id)
+    {
+        $data = request()->all();
+        pertanyaan::ubah($id, $data);
+        return redirect('/pertanyaan');
+    }
+    public function delete($id)
+    {
+        pertanyaan::hapus($id);
+        return redirect('/pertanyaan');
+    }
 }

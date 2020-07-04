@@ -17,8 +17,25 @@ class pertanyaan extends Model
         $newData = DB::table('pertanyaan')->insert($data);
         return $newData;
     }
+    public static function ubah($id, $data)
+    {
+        unset($data["_token"], $data["_method"]);
+        $date = date("Y-m-d H:i:s");
+        return DB::table('pertanyaan')
+            ->where('id',  $id)
+            ->update([
+                "judul" => $data["judul"],
+                "isi" => $data["isi"],
+                "tanggalEdit" => $date
+            ]);
+    }
     public static function detail($id)
     {
         return DB::table('pertanyaan')->where('id', $id)->get();
+    }
+    public static function hapus($id)
+    {
+        DB::table('jawaban')->where('pertanyaan_id', $id)->delete();
+        return DB::table('pertanyaan')->where('id', $id)->delete();
     }
 }

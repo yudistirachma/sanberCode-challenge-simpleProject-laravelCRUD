@@ -6,6 +6,7 @@
 @section('content')
     <form class="ml-4 mr-4" action="/pertanyaan/{{$data[0]->id}}" method="post">
         @csrf
+        @method('PUT')
         <div class="form-group">
             <label for="judul">Judul</label>
             <input type="text" class="form-control" value="{{$data[0]->judul}}" name="judul" id="judul">
